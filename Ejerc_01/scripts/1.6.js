@@ -48,4 +48,7 @@ const resumenCursos = cursos.map(curso => {
     }
 }
 )
+
 console.log(resumenCursos)
+
+//No lo acabe aun 
