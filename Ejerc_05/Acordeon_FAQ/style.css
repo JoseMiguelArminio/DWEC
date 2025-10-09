@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  margin: 40px auto;
+}
+
+h2 {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+h2:hover {
+  background-color: #0056b3;
+}
+
+p {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.oculto {
+  display: none;
+}

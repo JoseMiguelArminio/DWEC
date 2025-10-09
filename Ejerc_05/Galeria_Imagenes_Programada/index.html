@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería de Imágenes Programada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="galeria">
+    <img id="imagen-principal" src="img1.jpg" alt="Imagen principal" width="400">
+    
+    <div id="miniaturas">
+      <img class="miniatura" src="img1.jpg" alt="Miniatura 1" onclick="cambiarImagenPrincipal(0)">
+      <img class="miniatura" src="img2.jpg" alt="Miniatura 2" onclick="cambiarImagenPrincipal(1)">
+      <img class="miniatura" src="img3.jpg" alt="Miniatura 3" onclick="cambiarImagenPrincipal(2)">
+      <img class="miniatura" src="img4.jpg" alt="Miniatura 4" onclick="cambiarImagenPrincipal(3)">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

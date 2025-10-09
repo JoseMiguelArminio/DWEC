@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acordeón de FAQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Preguntas Frecuentes (FAQ)</h1>
+
+  <ul id="faq">
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es JavaScript?</h2>
+      <p class="oculto">JavaScript es un lenguaje de programación que permite crear interactividad en las páginas web.</p>
+    </li>
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es una función?</h2>
+      <p class="oculto">Una función es un bloque de código que realiza una tarea específica y puede ser reutilizado.</p>
+    </li>
+    <li>
+      <h2 onclick="revelarRespuesta(this)">¿Qué es el DOM?</h2>
+      <p class="oculto">El DOM es la estructura del documento HTML que el navegador interpreta y permite manipular con JavaScript.</p>
+    </li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
