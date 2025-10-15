@@ -1,0 +1,13 @@
+#cuadricula {
+  display: grid;
+  grid-template-columns: repeat(40, 15px);
+  grid-template-rows: repeat(40, 15px);
+  gap: 1px;
+  margin-top: 20px;
+}
+.celda {
+  width: 15px;
+  height: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
