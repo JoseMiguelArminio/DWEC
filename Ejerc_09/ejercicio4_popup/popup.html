@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ventana Emergente</title>
+</head>
+<body>
+  <h2>Hola, soy el Pop-up</h2>
+  <button id="cerrarPopup">Cerrar</button>
+
+  <script>
+    document.getElementById('cerrarPopup').addEventListener('click', () => {
+      if (window.opener && !window.opener.closed) {
+        window.opener.document.getElementById('titulo').textContent = 'El pop-up te saluda 👋';
+      }
+      window.close();
+    });
+  </script>
+</body>
+</html>

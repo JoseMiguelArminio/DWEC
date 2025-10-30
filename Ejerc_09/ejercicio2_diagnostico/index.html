@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2 - Panel de Diagnóstico</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    #indicador {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Panel de Diagnóstico del Navegador</h2>
+  <ul>
+    <li>Viewport: <span id="viewport"></span></li>
+    <li>Tamaño total: <span id="total"></span></li>
+    <li>Posición ventana: <span id="pos"></span></li>
+    <li>Resolución pantalla: <span id="res"></span></li>
+    <li>Espacio disponible: <span id="avail"></span></li>
+    <li>Conexión: <span id="estado"></span> <span id="indicador"></span></li>
+  </ul>
+
+  <script src="diagnostico.js"></script>
+</body>
+</html>
