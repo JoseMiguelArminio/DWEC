@@ -1,0 +1,13 @@
+[
+  {
+    "questionId": "Q001",
+    "text": "¿Cuál NO es un tipo de petición HTTP usado en AJAX?",
+    "options": [
+      { "id": "A", "text": "GET" },
+      { "id": "B", "text": "POST" },
+      { "id": "C", "text": "PULL" },
+      { "id": "D", "text": "PUT" }
+    ],
+    "correctAnswer": "C"
+  }
+]

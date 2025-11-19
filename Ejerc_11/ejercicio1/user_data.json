@@ -1,0 +1,8 @@
+{
+  "id": "USER001",
+  "personalInfo": {
+    "firstName": "Ana",
+    "lastName": "García Pérez",
+    "email": "ana.garcia@example.com"
+  }
+}
