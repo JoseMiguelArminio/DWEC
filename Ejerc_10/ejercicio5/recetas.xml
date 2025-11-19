@@ -1,0 +1,26 @@
+<recetas>
+  <aleacion>
+    <base>Hierro</base>
+    <mezcla>Carbono</mezcla>
+    <resultado>Acero</resultado>
+    <descripcion>Una aleación fuerte y versátil, usada durante siglos.</descripcion>
+  </aleacion>
+  <aleacion>
+    <base>Cobre</base>
+    <mezcla>Estaño</mezcla>
+    <resultado>Bronce</resultado>
+    <descripcion>Más duro que el cobre, revolucionó la Edad de los Metales.</descripcion>
+  </aleacion>
+  <aleacion>
+    <base>Aluminio</base>
+    <mezcla>Cobre</mezcla>
+    <resultado>Aluminio-Cobre</resultado>
+    <descripcion>Mejora la resistencia mecánica para aplicaciones aeronáuticas.</descripcion>
+  </aleacion>
+  <aleacion>
+    <base>Titanio</base>
+    <mezcla>Vanadio</mezcla>
+    <resultado>Titanio-Vanadio</resultado>
+    <descripcion>Aleación ligera y resistente a la corrosión, usada en la industria aeroespacial.</descripcion>
+  </aleacion>
+</recetas>

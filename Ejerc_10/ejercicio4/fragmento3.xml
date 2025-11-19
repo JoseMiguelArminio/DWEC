@@ -1,0 +1,7 @@
+<manuscrito>
+  <texto>Último reto: seleccionad la entrada importante de la lista.</texto>
+  <pista>Mirad la lista en la zona de texto.</pista>
+  <selector_solucion>#contenido ul li:first-child strong</selector_solucion>
+  <letra_clave>V</letra_clave>
+  <siguiente_fragmento>null</siguiente_fragmento>
+</manuscrito>

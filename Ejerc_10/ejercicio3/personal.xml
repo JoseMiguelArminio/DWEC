@@ -1,0 +1,18 @@
+<agentes>
+  <agente codigo="007">
+    <nombre>Mortadelo</nombre>
+    <clave>morcilla</clave>
+  </agente>
+  <agente codigo="009">
+    <nombre>Anacleto</nombre>
+    <clave>chorizo</clave>
+  </agente>
+  <agente codigo="001">
+    <nombre>James Bond</nombre>
+    <clave>skyfall</clave>
+  </agente>
+  <agente codigo="002">
+    <nombre>Ethan Hunt</nombre>
+    <clave>fallout</clave>
+  </agente>
+</agentes>
