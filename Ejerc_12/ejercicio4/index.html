@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 4</title>
+</head>
+<body>
+  <h1>Ejercicio 4 - Pedidos Completos</h1>
+  <ul id="out"></ul>
+
+  <script>
+    async function cargar() {
+      const [u, o, od, p] = await Promise.all([
+        fetch("../data/users.json").then(r => r.json()),
+        fetch("../data/orders.json").then(r => r.json()),
+        fetch("../data/orderDetails.json").then(r => r.json()),
+        fetch("../data/products.json").then(r => r.json())
+      ]);
+
+      const out = document.getElementById("out");
+      
+      o.forEach(order => {
+        const user = u.find(x => x.id === order.userId);
+        const detalles = od.filter(d => d.orderId === order.id);
+        const productos = detalles.map(d => {
+          const prod = p.find(pr => pr.id === d.productId);
+          return `${prod.name} x${d.quantity}`;
+        });
+
+        out.innerHTML += `<li>
+          Pedido #${order.id} - ${user.name}:
+          ${productos.join(", ")}
+        </li>`;
+      });
+    }
+
+    cargar();
+  </script>
+</body>
+</html>

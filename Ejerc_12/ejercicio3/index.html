@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 3</title>
+</head>
+<body>
+  <h1>Ejercicio 3 - Carga Múltiple</h1>
+  <ul id="out"></ul>
+
+  <script>
+    async function cargar() {
+      const [pRes, uRes] = await Promise.all([
+        fetch("../data/products.json"),
+        fetch("../data/users.json")
+      ]);
+
+      const productos = await pRes.json();
+      const usuarios = await uRes.json();
+
+      const ul = document.getElementById("out");
+      usuarios.forEach(u => {
+        ul.innerHTML += `<li>${u.name} (${productos.length} productos disponibles)</li>`;
+      });
+    }
+
+    cargar();
+  </script>
+</body>
+</html>

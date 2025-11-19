@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 5</title>
+</head>
+<body>
+  <h1>Ejercicio 5 - Dashboard</h1>
+  <ul id="out"></ul>
+
+  <script>
+    async function cargar() {
+      const [users, orders, details, products] = await Promise.all([
+        fetch("../data/users.json").then(r => r.json()),
+        fetch("../data/orders.json").then(r => r.json()),
+        fetch("../data/orderDetails.json").then(r => r.json()),
+        fetch("../data/products.json").then(r => r.json())
+      ]);
+
+      const ul = document.getElementById("out");
+
+      users.forEach(user => {
+        const userOrders = orders.filter(o => o.userId === user.id);
+        let total = 0;
+
+        userOrders.forEach(o => {
+          details
+            .filter(d => d.orderId === o.id)
+            .forEach(d => {
+              const prod = products.find(p => p.id === d.productId);
+              total += prod.price * d.quantity;
+            });
+        });
+
+        ul.innerHTML += `<li>${user.name}: ${total}€ gastados</li>`;
+      });
+    }
+
+    cargar();
+  </script>
+</body>
+</html>
