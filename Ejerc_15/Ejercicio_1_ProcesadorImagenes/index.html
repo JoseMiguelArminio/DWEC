@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Procesador de Imágenes por Lotes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Procesador de Imágenes</h1>
+
+  <div id="drop-zone">Arrastra aquí tus imágenes</div>
+  <div id="preview"></div>
+
+  <label>Marca de agua: <input type="text" id="watermark"></label>
+  <label>Ancho máximo: <input type="number" id="maxWidth" value="800"></label>
+  <label>Formato:
+    <select id="format">
+      <option value="image/png">PNG</option>
+      <option value="image/jpeg">JPEG</option>
+    </select>
+  </label>
+
+  <button id="process">Procesar imágenes</button>
+  <div id="downloads"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Planificador de Rutas</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+  <h1>Planificador de Rutas</h1>
+
+  <div id="form">
+    <label>Latitud: <input type="number" id="lat" step="any"></label>
+    <label>Longitud: <input type="number" id="lon" step="any"></label>
+    <button id="addPoint">Añadir Punto</button>
+  </div>
+
+  <div id="map"></div>
+
+  <h3>Puntos de la Ruta:</h3>
+  <ul id="pointsList"></ul>
+
+  <p>Distancia total: <span id="totalDistance">0</span> km</p>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
