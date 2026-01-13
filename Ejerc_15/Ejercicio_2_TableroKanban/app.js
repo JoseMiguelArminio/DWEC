@@ -1,30 +1,50 @@
 const cards = document.querySelectorAll('.card');
 const columns = document.querySelectorAll('.column');
 
+let draggedCard = null;
+
 cards.forEach(card => {
     card.addEventListener('dragstart', e => {
-        e.dataTransfer.setData('text/plain', card.id);
+        draggedCard = card;
         card.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
     });
-    card.addEventListener('dragend', () => card.classList.remove('dragging'));
+
+    card.addEventListener('dragend', () => {
+        draggedCard = null;
+        card.classList.remove('dragging');
+    });
 });
 
-columns.forEach(col => {
-    col.addEventListener('dragover', e => {
-        e.preventDefault();
-        const afterElement = getDragAfterElement(col, e.clientY);
-        const id = e.dataTransfer.getData('text/plain');
-        const draggable = document.getElementById(id);
+columns.forEach(column => {
+    column.addEventListener('dragover', e => {
+        e.preventDefault(); 
+        column.classList.add('over');
+
+        const afterElement = getDragAfterElement(column, e.clientY);
         if (afterElement == null) {
-            col.appendChild(draggable);
+            column.appendChild(draggedCard);
         } else {
-            col.insertBefore(draggable, afterElement);
+            column.insertBefore(draggedCard, afterElement);
+        }
+    });
+
+    column.addEventListener('dragleave', () => {
+        column.classList.remove('over');
+    });
+
+    column.addEventListener('drop', e => {
+        e.preventDefault();
+        column.classList.remove('over');
+        if (draggedCard) {
+            column.appendChild(draggedCard);
         }
     });
 });
 
 function getDragAfterElement(container, y) {
     const draggableElements = [...container.querySelectorAll('.card:not(.dragging)')];
+
     return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect();
         const offset = y - box.top - box.height / 2;
@@ -35,3 +55,6 @@ function getDragAfterElement(container, y) {
         }
     }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
+
+
+
