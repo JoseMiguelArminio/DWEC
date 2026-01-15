@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard de Seguridad y Eventos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <h1>Dashboard de Seguridad y Consumo</h1>
+
+  <section class="resumen">
+    <h2>Resumen Global</h2>
+    <p>Consumo Total detectado: <span id="total">0.00 MB</span></p>
+  </section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID Sesión</th>
+        <th>Usuario</th>
+        <th>Consumo (MB)</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <h1>Próximos Eventos</h1>
+
+  <div class="eventos">
+
+    <div class="evento">
+      <h3>Congreso de IA Oviedo</h3>
+      <p>Fecha: 15/01/2026</p>
+      <p class="contador" id="ev1"></p>
+    </div>
+
+    <div class="evento">
+      <h3>Actualización de Seguridad Q1</h3>
+      <p>Fecha: 02/03/2026</p>
+      <p class="contador" id="ev2"></p>
+    </div>
+
+    <div class="evento">
+      <h3>Revisión de Código Pasada</h3>
+      <p>Fecha: 05/01/2026</p>
+      <p class="contador" id="ev3"></p>
+    </div>
+
+  </div>
+
+  <script src="js/logs.js"></script>
+  <script src="js/eventos.js"></script>
+</body>
+</html>
