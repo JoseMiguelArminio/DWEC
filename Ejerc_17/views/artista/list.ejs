@@ -1,0 +1,14 @@
+<h2>Artistas</h2>
+
+<a href="/artistas/form">Añadir artista</a>
+
+<div class="grid">
+  <% artistas.forEach(a => { %>
+    <div class="card">
+      <a href="/artistas/<%= a.id %>">
+        <img src="<%= a.foto %>">
+        <h3><%= a.nombre %></h3>
+      </a>
+    </div>
+  <% }) %>
+</div>
