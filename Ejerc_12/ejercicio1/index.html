@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 1</title>
+</head>
+<body>
+  <h1>Ejercicio 1 - Lista de Productos</h1>
+
+  <button id="filter">Mostrar solo disponibles</button>
+  <button id="sort">Ordenar por precio</button>
+
+  <ul id="lista"></ul>
+
+  <script>
+    let productos = [];
+
+    async function cargar() {
+      const res = await fetch("../data/products.json");
+      productos = await res.json();
+      mostrar(productos);
+    }
+
+    function mostrar(lista) {
+      const ul = document.getElementById("lista");
+      ul.innerHTML = "";
+      lista.forEach(p => {
+        ul.innerHTML += `<li>${p.name} - ${p.price}€ - ${p.inStock ? "✔" : "❌"}</li>`;
+      });
+    }
+
+    document.getElementById("filter").onclick = () => {
+      mostrar(productos.filter(p => p.inStock));
+    };
+
+    document.getElementById("sort").onclick = () => {
+      mostrar([...productos].sort((a, b) => a.price - b.price));
+    };
+
+    cargar();
+  </script>
+</body>
+</html>

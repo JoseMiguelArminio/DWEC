@@ -1,0 +1,12 @@
+<h1>Catálogo de Libros</h1>
+
+<table>
+<tr><th>Título</th><th>Autor</th><th>Estado</th></tr>
+<% libros.forEach(l => { %>
+<tr>
+  <td><a href="/libro/<%= l.id %>"><%= l.titulo %></a></td>
+  <td><%= l.autor %></td>
+  <td><%= l.estado %></td>
+</tr>
+<% }) %>
+</table>

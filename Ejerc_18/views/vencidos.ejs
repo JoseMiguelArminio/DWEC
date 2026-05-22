@@ -1,0 +1,13 @@
+<h1>Libros Vencidos</h1>
+
+<table>
+<tr><th>Título</th><th>Autor</th><th>Usuario</th><th>Devolución</th></tr>
+<% vencidos.forEach(v => { %>
+<tr>
+  <td><%= v.titulo %></td>
+  <td><%= v.autor %></td>
+  <td><%= v.nombre_prestatario %></td>
+  <td><%= v.fecha_devolucion %></td>
+</tr>
+<% }) %>
+</table>

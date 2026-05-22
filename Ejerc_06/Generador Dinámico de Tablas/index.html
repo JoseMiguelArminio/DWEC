@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 2 - Tabla Dinámica</title>
+<link rel="stylesheet" href="ej2.css">
+</head>
+<body>
+<h2>Generador Dinámico de Tablas</h2>
+
+<form id="formulario">
+  <label>Nombre: </label>
+  <input type="text" id="nombre" required>
+  <label>Apellido: </label>
+  <input type="text" id="apellido" required>
+  <button type="button" id="añadir">Añadir Fila</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+    </tr>
+  </thead>
+  <tbody id="cuerpo"></tbody>
+</table>
+
+<script src="ej2.js"></script>
+</body>
+</html>

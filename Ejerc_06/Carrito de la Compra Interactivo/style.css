@@ -1,0 +1,3 @@
+body { font-family: sans-serif; display: flex; gap: 40px; }
+#productos, #carrito { border: 1px solid black; padding: 20px; width: 300px; }
+button { margin-top: 5px; }

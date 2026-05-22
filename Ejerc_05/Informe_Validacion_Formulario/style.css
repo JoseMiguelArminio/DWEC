@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  margin: 40px auto;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+#informe-errores p {
+  background-color: #ffdddd;
+  border-left: 4px solid #ff4444;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#informe-errores p.exito {
+  background-color: #ddffdd;
+  border-left: 4px solid #22bb33;
+}

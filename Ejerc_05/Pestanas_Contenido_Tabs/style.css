@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#botones-pestanas {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.contenido {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.oculto {
+  display: none;
+}

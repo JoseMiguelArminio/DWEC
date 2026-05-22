@@ -1,0 +1,19 @@
+<h1><%= libro.titulo %></h1>
+<p><b>Autor:</b> <%= libro.autor %></p>
+<p><b>ISBN:</b> <%= libro.isbn %></p>
+
+<% if (libro.estado === 'Disponible') { %>
+  <a href="/prestamo/formulario/<%= libro.id %>">Prestar libro</a>
+<% } else { %>
+  <p>Prestado a: <%= prestamoActivo.nombre_prestatario %></p>
+  <form method="POST" action="/prestamo/devolver/<%= libro.id %>">
+    <button>Registrar devolución</button>
+  </form>
+<% } %>
+
+<h2>Historial</h2>
+<ul>
+<% historial.forEach(p => { %>
+  <li><%= p.nombre_prestatario %> - <%= p.fecha_prestamo %></li>
+<% }) %>
+</ul>

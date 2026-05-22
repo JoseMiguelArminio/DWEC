@@ -1,0 +1,7 @@
+<manuscrito>
+  <texto>Busca la palabra enfatizada en el primer párrafo.</texto>
+  <pista>Está en un &lt;strong&gt; dentro de un párrafo del contenido.</pista>
+  <selector_solucion>#contenido p strong</selector_solucion>
+  <letra_clave>O</letra_clave>
+  <siguiente_fragmento>fragmento3.xml</siguiente_fragmento>
+</manuscrito>

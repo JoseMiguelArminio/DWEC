@@ -1,0 +1,25 @@
+<h2>Nuevo Álbum</h2>
+
+<% if (error) { %>
+  <p style="color:red"><%= error %></p>
+<% } %>
+
+<form method="POST" action="/albumes/save">
+  <label>Título:</label>
+  <input type="text" name="titulo"><br>
+
+  <label>Año:</label>
+  <input type="number" name="anio"><br>
+
+  <label>Artista:</label>
+  <select name="artistaId">
+    <% artistas.forEach(a => { %>
+      <option value="<%= a.id %>"><%= a.nombre %></option>
+    <% }) %>
+  </select><br>
+
+  <label>Foto (URL):</label>
+  <input type="text" name="foto"><br>
+
+  <button type="submit">Guardar</button>
+</form>

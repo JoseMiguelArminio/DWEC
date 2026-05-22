@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejercicio 2</title>
+</head>
+<body>
+  <h1>Ejercicio 2 - Validación SKU</h1>
+
+  <input id="sku" placeholder="Introduce SKU" />
+  <button id="check">Validar</button>
+
+  <p id="msg"></p>
+
+  <script>
+    async function validarSKU(sku) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(sku.length >= 4);
+        }, 500);
+      });
+    }
+
+    document.getElementById("check").onclick = async () => {
+      const sku = document.getElementById("sku").value;
+      const ok = await validarSKU(sku);
+      document.getElementById("msg").textContent =
+        ok ? "SKU válido" : "SKU demasiado corto";
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<documento>
+  <id>3</id>
+  <titulo>Declaración de Derechos</titulo>
+  <fecha>1791</fecha>
+  <imagen>img/doc3.jpg</imagen>
+  <descripcion>Lista de derechos fundamentales.</descripcion>
+  <siguiente>null</siguiente>
+  <anterior>documento_2.xml</anterior>
+</documento>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "PROD001",
+    "name": "Smartphone X",
+    "price": 699.99,
+    "category": "Electrónica",
+    "brand": "TechCorp"
+  },
+  {
+    "id": "PROD002",
+    "name": "Laptop UltraBook",
+    "price": 1299.99,
+    "category": "Electrónica",
+    "brand": "InnovatePC"
+  },
+  {
+    "id": "PROD003",
+    "name": "Cafetera Espresso",
+    "price": 129.00,
+    "category": "Hogar",
+    "brand": "HomeEssentials"
+  }
+]

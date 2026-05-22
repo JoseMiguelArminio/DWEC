@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión de Usuarios</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h1>Gestión de Usuarios</h1>
+
+<div class="container">
+    <!-- Formulario -->
+    <form id="userForm">
+        <h2>Añadir / Editar Usuario</h2>
+        <input type="text" id="firstName" placeholder="Nombre" required>
+        <input type="text" id="lastName" placeholder="Apellido" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="url" id="picture" placeholder="URL de Foto" required>
+        <button type="submit">Guardar Usuario</button>
+    </form>
+
+    <!-- Lista de usuarios -->
+    <div class="user-list-container">
+        <input type="text" id="search" placeholder="Buscar usuarios...">
+        <ul id="userList"></ul>
+    </div>
+</div>
+
+<div id="messages"></div>
+
+<!-- Modal de calificaciones -->
+<div id="gradesModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2 id="gradesUserName"></h2>
+        <form id="gradesForm">
+            <label>Matemáticas: <input type="number" id="math" min="0" max="10" required></label>
+            <label>Historia: <input type="number" id="history" min="0" max="10" required></label>
+            <label>Ciencia: <input type="number" id="science" min="0" max="10" required></label>
+            <label>Inglés: <input type="number" id="english" min="0" max="10" required></label>
+            <label>Arte: <input type="number" id="art" min="0" max="10" required></label>
+            <button type="submit">Guardar Calificaciones</button>
+            <button type="button" id="deleteGrades">Borrar Calificaciones</button>
+        </form>
+    </div>
+</div>
+
+<button id="loadInitialUsers">Cargar Usuarios Iniciales</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
